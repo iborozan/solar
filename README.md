@@ -1,1 +1,1 @@
-solar project for insight
+Predicting Solar Generation Using Machine Learning
