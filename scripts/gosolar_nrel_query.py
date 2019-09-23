@@ -90,14 +90,11 @@ if __name__ == '__main__':
 
     file_postal_codes = sys.argv[1]   
 
-    #postcode = pd.read_csv('./' + sys.argv[1])
-    
+    postcode = pd.read_csv('./' + sys.argv[1])
+
+    # loading in the csv file that has all the zipcodes with their corresponding lat/lon pairs
     start_date = datetime.now().time()
     
-    # loading in the csv file that has all the zipcodes with their corresponding lat/lon pairs
-    #postal_code = pd.read_csv("./us_zip_codes_gosolar.csv")
-    postcode = pd.read_csv("./zips_left_to_process.csv")
-
     # values for the api query
     # You must request an NSRDB api key from https://developer.nrel.gov/signup/
     api_key = '-------'
@@ -212,4 +209,4 @@ if __name__ == '__main__':
 
     #print(datetime.now().time())
     print("Downloaded data for %s postal codes between %s and %s" % (last_post_code_success, start_date, finish_date))
-    #print("between 
+    
