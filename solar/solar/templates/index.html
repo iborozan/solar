@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>solar</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="../static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="../static/css/creative.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><font size="6"><i>GOSolar!</i></font></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Github">Github</a>
+          </li>
+	  
+	  <!--
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+	  -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <h5 style="margin-left: 20px; margin-top: 10px; color: black"><b>Enter your location / address</b></h5>
+    
+      <div class="row">
+            <div class="col-md-7">
+        	<form class="form-horizontal" action="/output" method="POST" style="margin-left:20px">
+                    <fieldset>
+                        <!-- Address form -->
+
+                        <!-- <h6>Address</h6> -->
+
+                        <!-- address-line1 input-->
+			<!--
+                        <div class="control-group">
+                            <label class="col-sm-2 control-label">Address Line 1</label>
+                            <div class="col-sm-10">
+                                <input id="address-line1" name="address-line1" type="text" placeholder="Address Line 1" class="form-control">
+                                <p class="help-block">Street address, P.O. box, company name, c/o</p>
+                            </div>
+                        </div>
+			-->
+                        <!-- address-line2 input-->
+			<!--
+                        <div class="control-group">
+                            <label class="col-sm-2 control-label">Address Line 2</label>
+                            <div class="col-sm-10">
+                                <input id="address-line2" name="address-line2" type="text" placeholder="Address Line 2" class="form-control">
+                                <p class="help-block">Apartment, suite , unit, building, floor, etc.</p>
+                            </div>
+                        </div>
+			-->
+                        <!-- city input-->
+                        <div class="control-group">
+                            <label class="col-sm-2 control-label">City / Town</label>
+                            <div class="col-sm-10">
+                                <input id="city" name="city" type="text" placeholder="City" class="form-control">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <!-- region input-->
+                        <!--<div class="control-group">
+                            <label class="col-sm-2 control-label">State</label>
+                            <div class="col-sm-10">
+                                <input id="state" name="state" type="text" placeholder="State"
+                                class="form-control">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>-->
+                        <!-- postal-code input-->
+                        <div class="control-group">
+                            <label class="col-sm-2 control-label">Postal Code</label>
+                            <div class="col-sm-10">
+                                <input id="postal-code" name="postal_code" type="text" placeholder="Postal Code" class="form-control">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="col-sm-2 control-label">Province</label>
+                            <div class="col-sm-10">
+                                <select id="provance" name="province" class="input-xlarge">
+                                  <option value="" selected="selected">Ontario can only be selected for now</option>
+				   <option value="ON">Ontario</option>
+				    <!--
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+				    -->
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+
+                    <fieldset>
+		      <br>
+		      
+                      <h5><b>Enter your solar panel information</b></h5>
+                      <div class="control-group">
+                          <label class="col-sm-2 control-label">Installation size</label>
+                          <div class="col-sm-10">
+                              <input id="area" name="size" type="number" placeholder="kW" class="form-control">
+                              <p class="help-block"><font size="3.5">This should be the size of your solar installation in kW</font></p>
+                          </div>
+                      </div>
+                      <!-- postal-code input-->
+                      <div class="control-group">
+                          <label class="col-sm-2 control-label">Tilt</label>
+                          <div class="col-sm-10">
+                              <input id="tilt" name="tilt" type="number" placeholder="Tilt" class="form-control">
+                              <p class="help-block"><font size="3.5">Tilt of your roof/where solar array would be placed in degrees</font></p>
+                          </div>
+                      </div>
+
+                      <div class="control-group">
+                          <label class="col-sm-2 control-label">Direction/Azimuth</label>
+                          <div class="col-sm-10">
+                              <select id="direction" name="azimuth" class="input-xlarge">
+                                  <option value="" selected="selected">Select an azimuth angle</option>
+                                  <option>S</option>
+                                  <option>SW</option>
+                                  <option>W</option>
+                                  <option>NW</option>
+                                  <option>N</option>
+                                  <option>NE</option>
+                                  <option>E</option>
+                                  <option>SE</option>
+                              </select>
+                              <p class="help-block"><font size="3.5">This is the north/south direction the solar array would be facing</font></p>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="pull-left">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <p class="help-block"><font size="3.5">Calculating may take a moment</font></p>
+
+                          </div>
+                        </div>
+                      </div>
+                   </fieldset>
+
+                   <input type="hidden" name="csrfmiddlewaretoken" value="GP5bLXYF02rdOEO5DTcPVwz4UmmwQcAzK8GxPtbs9uD00PQC5CmjIHvoz73xmV2O">
+                </form>
+        	</div>
+
+	    <div class="col-md-5">
+        <div class="container">
+          <h3 style="text-align: left; color:red">  </h3>
+            <div class="row col-md-10 col-md-offset-2 custyle">
+            <table class="table table-striped custab" style="width: 400px; margin-left: 0px">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Value</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+                    <tbody><tr>
+                        <td></td>
+                        <td>Annual Energy Output (kWh/year)</td>
+                        <td>{{sol_energy}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Annual Return (CAD)</td>
+                        <td>{{savings}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Estimated cost (CAD)</td>
+                        <td>{{cost}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Break Even Time (Years)</td>
+                        <td>{{be1}} - {{be2}}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Optimal Tilt (degrees)</td>
+                        <td>{{optimum_tilt}}</td>
+                    </tr>
+            </tbody></table>
+	    <p class="help-block" style="text-align: left"><font size="3.5">Estimate on the annual return is based on the current electricity price in Ontario (13.4 cents/kWh) with a projected 8.9% rate increase and adjusted for inflation</font></p>
+	    <p class="help-block" style="text-align: left"><font size="3.5">Estimated cost is based on the US market and projected to Canadian dollars</font></p>
+	     <p class="help-block" style="text-align: left"><font size="3.5">Break-even time is based on electricity prices projected over a 10 year period</font></p>
+	    <p class="help-block" style="text-align: left"><font size="3.5">* see <a href="/about/#assumptions">about</a> and <a href="/github/#assumptions"> Github </a> for more information</font></p>
+            </div>
+        </div>
+      </div>
+</div>
+    <!--
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+      </div>
+    </div>
+    -->
+  </header>
+
+  <!-- About Section -->
+  <!-- 
+  <section class="page-section bg-primary" id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-white mt-0">We've got what you need!</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ -->
+  <!-- Services Section -->
+  <!-- 
+  <section class="page-section" id="services">
+    <div class="container">
+      <h2 class="text-center mt-0">At Your Service</h2>
+      <hr class="divider my-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Sturdy Themes</h3>
+            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Up to Date</h3>
+            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Ready to Publish</h3>
+            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Made with Love</h3>
+            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  <!-- Portfolio Section -->
+  <!--
+  <section id="portfolio">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
+            <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
+            <div class="portfolio-box-caption p-3">
+              <div class="project-category text-white-50">
+                Category
+              </div>
+              <div class="project-name">
+                Project Name
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  <!-- Call to Action Section -->
+  <!--
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
+      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
+    </div>
+  </section>
+ -->
+
+
+  <!-- Contact Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <!--
+      <div class="row justify-content-center">
+	<!--
+	<div class="col-lg-8 text-center">
+          <h2 class="mt-0">Let's Get In Touch!</h2>
+          <hr class="divider my-4">
+          <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+        </div>
+      </div>
+-->
+      <div class="row">
+	<div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+	 <!-- 
+	  <a href="url">Github</a> 
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+         <!-- <i class="fas fa-phone fa-3x mb-3 text-muted"></i> 
+          <div>+1 (202) 555-0149</div> -->
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <!-- <i class="fas fa-envelope fa-3x mb-3 text-muted"></i> -->
+          <!-- Make sure to change the email address in anchor text AND the link below! -->
+          <!--<a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../static/js/creative.min.js"></script>
+
+</body>
+
+</html>
