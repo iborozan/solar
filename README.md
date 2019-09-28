@@ -12,7 +12,9 @@ Developed a machine learning based model to accurately predict the energy output
 
 * a dataset from the [National Solar Radiation Database (NSRDB)](https://nsrdb.nrel.gov/) that includes hourly measures of weather patterns such as radiation, position of the sun, temperature and wind speed
 
-The final product is a user friendly webb app developed to help Ontario residents predict with improved accuracy their solar installation annual energy output and other key characteristics such as:
+The final product is a user friendly webb app developed to help Ontario residents predict their solar installation annual energy output and other key characteristics with improved accuracy.
+
+Based on geographical location, panel size, roof pitch and its orientation, GoSolar web app provides predictions for:
 
 * Annual Energy Output (kWh/year)
 * Annual Return (CAD)
