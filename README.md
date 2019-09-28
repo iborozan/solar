@@ -1,5 +1,5 @@
-GoSolar: Accurately predicting annual solar power generation using machine learning 
-===================================================================================
+GoSolar: Accurately predicting photovoltaic installation power generation using machine learning 
+================================================================================================
 
 **Author** Ivan Borozan 
 
