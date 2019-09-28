@@ -5,9 +5,9 @@ import os
 import sqlite3
 import pickle
 from numpy import *
+import copy
 
-
-def get_prediction(postal_code, size_kw, tilt, azimuth):
+def get_prediction(postal_code, size_kw, tilt, azimuth, latitude):
     """ Function that fits the best regression model and calculates predictions for the solar webapp"""
     size_kw = float(size_kw)
     tilt = float(tilt)
@@ -33,11 +33,9 @@ def get_prediction(postal_code, size_kw, tilt, azimuth):
         azimuth1 = 90
     elif azimuth == 'SE':
         azimuth1 = 90 + 45
-    print(azimuth1)
     conn = sqlite3.Connection("./models/nrel_data.db")
     nrel_data_point = pd.read_sql("SELECT * FROM nrel_data WHERE Zipcode = " + postal_code, con=conn)
     # calculate the tilt difference
-    latitude = pd.read_sql("SELECT * FROM postal_codes_on WHERE zipcode = " + postal_code, con=conn)[['Latitude']].values[0][0]
     tilt_difference = abs(tilt - latitude)
     optimum_tilt = latitude
     # get the model prediction for irradinace 
@@ -62,9 +60,9 @@ def get_prediction(postal_code, size_kw, tilt, azimuth):
 
 
 def process_postal_code(postal_code1):
-    # take the first two letters of the postal code 
-    postal_code = '"' + postal_code1[0:3] + '"'
-    return postal_code
+    # take the first two letters of the postal code
+    sub_str = '"' + postal_code1[0:3] + '"'
+    return sub_str
 
 
 

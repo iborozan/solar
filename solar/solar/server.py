@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from compute import *
+import sqlite3
+import re
 
 # Create the application object
 app = Flask(__name__)
@@ -18,21 +20,49 @@ def tag_output():
        size_kw = request.form["size"]
        tilt = request.form["tilt"]
        azimuth = request.form["azimuth"]
-
-       print(type(size_kw))
-       print(type(tilt))
+     
+       city_str = '"' + city + '"'
        
+       conn = sqlite3.Connection("./models/nrel_data.db")
+
+       # clean possible whitespaces
+       postal_code1 = postal_code1.strip()
+
+       # test if the postal code with data exists in the db 
+       if postal_code1 != '':
+           postal_code = process_postal_code(postal_code1)
+           try:
+               latitude = pd.read_sql("SELECT * FROM postal_codes_on2 WHERE fsa = " + postal_code, con=conn)[['Latitude']].values[0][0]
+           except IndexError:
+               latitude = '' 
+           try:
+               nrel_data_point = pd.read_sql("SELECT * FROM nrel_data WHERE Zipcode = " + postal_code, con=conn)
+           except IndexError:
+               latitude = ''
+       elif city != '':
+            # if no postal code is provided get one by using the city info 
+            try:
+               postal_code1 = pd.read_sql("SELECT * FROM postal_codes_on2 WHERE place_name = " + city_str, con=conn)[['fsa']].values[0][0]
+               postal_code = process_postal_code(postal_code1)
+               latitude = pd.read_sql("SELECT * FROM postal_codes_on2 WHERE fsa = " + postal_code, con=conn)[['Latitude']].values[0][0]
+            except IndexError:
+                latitude = ''
+    
+       if (city != '' and postal_code != ''):
+               print(city_str, postal_code)
+               try:
+                   latitude = pd.read_sql("SELECT * FROM postal_codes_on2 WHERE fsa = " + postal_code + " OR place_name = " + city_str, con=conn)[['Latitude']].values[0][0]
+               except IndexError:
+                  latitude  = ''       
+               
+           
        # Case if empty
-       if postal_code1 == '':
+       if size_kw == '' or tilt == '' or azimuth == '' or latitude  == '':
            return render_template("index.html",
                                   my_input = postal_code,
                                   my_form_result="Empty")
-       
        else:           
-           postal_code = process_postal_code(postal_code1)
-           sol_energy, cost, savings, be1, be2, optimum_tilt = get_prediction(postal_code, size_kw, tilt, azimuth)
-           #some_output = 'yes'
-           print(sol_energy)
+           sol_energy, cost, savings, be1, be2, optimum_tilt = get_prediction(postal_code, size_kw, tilt, azimuth, latitude)
            return render_template("index.html",
                               sol_energy=round(sol_energy[0], 0),
                               savings = round(savings[0], 0),
