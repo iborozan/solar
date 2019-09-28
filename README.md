@@ -14,7 +14,7 @@ Developed a machine learning based model to accurately predict the energy output
 
 The final product is a user friendly webb app developed to help Ontario residents predict their solar installation annual energy output and other key characteristics with improved accuracy.
 
-Based on geographical location, panel size, roof pitch and its orientation, GoSolar web app provides predictions for:
+Based on geographical location, panel size, roof pitch and its orientation GoSolar web app provides predictions for:
 
 * Annual Energy Output (kWh/year)
 * Annual Return (CAD)
