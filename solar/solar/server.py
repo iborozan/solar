@@ -13,6 +13,16 @@ def home_page():
 @app.route('/output', methods=["GET", "POST"])
 def tag_output():
 #       
+
+       # init variables
+       city = ''
+       postal_code1 = ''
+       size_kw = ''
+       tilt = ''
+       azimuth = ''
+       latitude = ''
+       postal_code = ''
+       
        # Pull input
        city = request.form["city"]        
        postal_code1 = request.form["postal_code"]
@@ -20,7 +30,9 @@ def tag_output():
        size_kw = request.form["size"]
        tilt = request.form["tilt"]
        azimuth = request.form["azimuth"]
-     
+
+       print(city, postal_code1, province, size_kw, tilt, azimuth)
+       
        city_str = '"' + city + '"'
        
        conn = sqlite3.Connection("./models/nrel_data.db")
@@ -63,15 +75,31 @@ def tag_output():
                                   my_form_result="Empty")
        else:           
            sol_energy, cost, savings, be1, be2, optimum_tilt = get_prediction(postal_code, size_kw, tilt, azimuth, latitude)
-           return render_template("index.html",
-                              sol_energy=round(sol_energy[0], 0),
-                              savings = round(savings[0], 0),
-                              cost=round(cost[0], 1),
-                              #cost_ci=round(cost[0]*0.25, 0),
-                              be1=round(be1[0], 0),
-                              be2=round(be2[0], 0),
-                              optimum_tilt=round(optimum_tilt, 0),
-                              my_form_result="NotEmpty")
+           if sol_energy < 0:
+               sol_energy = 'Inefficient direction/azimuth'
+               savings = '-'
+               cost= '-'
+               be1='-'
+               be2='-'
+               optimum_tilt='-'
+               return render_template("index.html",
+                                  sol_energy=sol_energy,
+                                  savings = savings,
+                                  cost=cost,
+                                  be1=be1,
+                                  be2=be2,
+                                  optimum_tilt=optimum_tilt,
+                                  my_form_result="NotEmpty")
+           else:
+               return render_template("index.html",
+                                  sol_energy=round(sol_energy[0], 0),
+                                  savings = round(savings[0], 0),
+                                  cost=round(cost[0], 1),
+                                  #cost_ci=round(cost[0]*0.25, 0),
+                                  be1=round(be1[0], 0),
+                                  be2=round(be2[0], 0),
+                                  optimum_tilt=round(optimum_tilt, 0),
+                                  my_form_result="NotEmpty")
 
 
 # start the server with the 'run()' method

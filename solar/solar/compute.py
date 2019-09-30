@@ -33,6 +33,7 @@ def get_prediction(postal_code, size_kw, tilt, azimuth, latitude):
         azimuth1 = 90
     elif azimuth == 'SE':
         azimuth1 = 90 + 45
+    print(azimuth1)
     conn = sqlite3.Connection("./models/nrel_data.db")
     nrel_data_point = pd.read_sql("SELECT * FROM nrel_data WHERE Zipcode = " + postal_code, con=conn)
     # calculate the tilt difference
