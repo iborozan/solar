@@ -26,7 +26,7 @@ def get_prediction(postal_code, size_kw, tilt, azimuth, latitude):
     elif azimuth == 'NW':
         azimuth1 = 180 + 90 + 45
     elif azimuth == 'N':
-        azimuth1 = 0
+        azimuth1 = 1
     elif azimuth == 'NE':
         azimuth1 = 45
     elif azimuth == 'E':
