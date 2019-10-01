@@ -55,8 +55,10 @@ def get_prediction(postal_code, size_kw, tilt, azimuth, latitude):
     # taking into account an increase of 8.9% in elec cost over a year 
     total_annual_savings = solar_energy_output_yr * el_cost_on * pow((1 + rate / 100), 1)
     total_annual_savings_cum = solar_energy_output_yr * el_cost_on * (pow((1 + rate / 100), time))
-    break_even_time_low = (cost_prediction - cost_prediction*0.25)/total_annual_savings_cum
-    break_even_time_max = (cost_prediction + cost_prediction*0.25)/total_annual_savings_cum
+    # estimated 15% error : is the average median error on the cost (see solar_eda_and_technical_report)
+    error_cost = 0.1527
+    break_even_time_low = (cost_prediction - cost_prediction*error_cost)/total_annual_savings_cum
+    break_even_time_max = (cost_prediction + cost_prediction*error_cost)/total_annual_savings_cum
     return solar_energy_output_yr, cost_prediction, total_annual_savings, break_even_time_low, break_even_time_max, optimum_tilt
 
 

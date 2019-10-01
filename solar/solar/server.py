@@ -96,8 +96,8 @@ def tag_output():
                                   savings = round(savings[0], 0),
                                   cost=round(cost[0], 1),
                                   #cost_ci=round(cost[0]*0.25, 0),
-                                  be1=round(be1[0], 0),
-                                  be2=round(be2[0], 0),
+                                  be1 = (round(be1[0], 0) + round(be2[0], 0))/2,
+                                  be2 = round((be2[0] - be1[0])/2),   
                                   optimum_tilt=round(optimum_tilt, 0),
                                   my_form_result="NotEmpty")
 
