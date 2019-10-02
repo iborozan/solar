@@ -1,4 +1,4 @@
-GoSolar: Accurately predicting photovoltaic installation power generation using machine learning 
+GoSolar: Accurately predicting photovoltaic installation power generation using machine learning and weather information 
 ================================================================================================
 
 **Author** Ivan Borozan 
