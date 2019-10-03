@@ -15,7 +15,7 @@ import sys, os
 # connect to the database 
 def sql_connection():
     try:
-        conn = sqlite3.connect('./gosolar_test.db')
+        conn = sqlite3.connect('./gosolar.db')
         return conn
     except Error:
         print(Error)
@@ -50,7 +50,7 @@ def query_nrel(fails, last_post_code_success):
         pivot = df.pivot_table(["GHI","DHI","DNI","Wind Speed","Temperature","Solar Zenith Angle"], index="Year")
         for c in pivot.columns:
             postal_code_values[c].append(pivot[c].values[0])
-        postal_code_values["Zipcode"].append(postal_code_values[floor_lower_iter:top_lower_iter][i])
+        postal_code_values["Zipcode"].append(all_postal_codes[floor_lower_iter:top_lower_iter][i])
         print('going to the next postal code')
         # only allowed to do 1000 requests per hour
         # see https://developer.nrel.gov/docs/rate-limits/
@@ -82,7 +82,7 @@ def query_nrel(fails, last_post_code_success):
 
 
 if __name__ == '__main__':
-    print ('This script will query the NREL API if provided with a list of postal/zip codess')
+    print ('This script will query the NREL API if provided with a list of postal/zip codes')
     if (len(sys.argv)!=2):
         print ("Need to provide a file with postal codes, latitude, lognitude:")
         print ("Usage: python gosolar_nrel_query.py file_name_with_postal_codes.csv")
