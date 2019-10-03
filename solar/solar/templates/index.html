@@ -26,7 +26,7 @@
 </head>
 
 <body id="page-top">
-
+  <img src="../static/img/sun2.jpg" alt="sunrise" style="width:100%;height:200px;">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
@@ -37,12 +37,11 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about"><font size="4">About</font></a>
+            <a class="nav-link js-scroll-trigger" href="../static/about.html"><font size="4">About</font></a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="https://github.com/iborozan/solar"><font size="4">Github</font></a>
-          </li>
-	  
+          </li> 
 	  <!--
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">Services</a>
@@ -59,8 +58,9 @@
     </div>
   </nav>
 
-  <!-- Masthead -->
-  <header class="masthead">
+<!-- Masthead -->
+<header class="masthead">
+  
     <h5 style="margin-left: 20px; margin-top: 10px; color: black"><b>Enter your location / address</b></h5>
     
       <div class="row">
@@ -121,7 +121,7 @@
                             <label class="col-sm-2 control-label">Province</label>
                             <div class="col-sm-10">
                                 <select id="provance" name="province" class="input-xlarge">
-                                  <option value="" selected="selected">Ontario can only be selected for now</option>
+                                  <option value="" selected="selected">-</option>
 				   <option value="ON">Ontario</option>
                                 </select>
                             </div>
@@ -185,7 +185,7 @@
 
 	    <div class="col-md-5">
         <div class="container">
-          <h3 style="text-align: left; color:red">Predicted features:</h3>
+          <h3 style="text-align: left; color:red">Predictions:</h3>
             <div class="row col-md-10 col-md-offset-2 custyle">
             <table class="table table-striped custab" style="width: 400px; margin-left: 0px">
             <thead>
@@ -213,7 +213,7 @@
                     <tr>
                         <td></td>
                         <td><font size="4.5"><b>Break Even Time (Years)</font></b></td>
-                        <td>{{be1}} +/- {{be2}}</td>
+                        <td>{{b1}} +/- {{b2}}</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -226,7 +226,7 @@
 	    <p class="help-block" style="text-align: left"><font size="3.0"><sup>**</sup>Estimated cost is based on the US market and projected to Canadian dollars</font></p>
 	    <p class="help-block" style="text-align: left"><font size="3.0"><sup>***</sup>Break-even time is based on electricity prices projected over a 10 year period</font></p>
             -->
-	    <p class="help-block" style="text-align: left"><font size="2.0">For more information see <a href="#about">about</a> and the projects <a href="https://github.com/iborozan/solar"> Github </a> page </font></p>
+	    <p class="help-block" style="text-align: left"><font size="2.0">For more information see <a href="../static/about.html">about</a> and the projects <a href="https://github.com/iborozan/solar"> Github </a> page </font></p>
             </div>
         </div>
       </div>
@@ -247,209 +247,7 @@
     -->
   </header>
 
-  <!-- About Section -->
-  <section class="page-section bg-primary" id="about">
-    <div class="row">
-     <div class="col-lg-8 text-left">
-  <!--
-    <div class="container">
-    <div class="container">
-      <div class="row justify-content-left">
-        <div class="col-lg-8 text-left">
-          <h2 class="text-white mt-0">GOSolar project</h2>
-          <hr class="divider light my-4">
-	  -->
-	  <h2><b><i>The GOSolar project</i></b></h2>
-	  <br>
-	 <div class="container"> 
-	   <p class="help-block" style="text-align: left"><font size="4.0">This web app is developed to help residents of Ontario who are wishing to switch to solar renewable energy predict key characteristics for their photovoltaic installations based on their geographic location, panel size, roof pitch and orientation.</p>
-	   <p class="help-block" style="text-align: left">The model also takes into account yearly weather information for each location specified.</p></p>
-	  <p class="help-block" style="text-align: left"><font size="3.0">Some of the main assumptions used in the model:</font></p>
-	  <div class="container">
-	  <p class="help-block" style="text-align: left"><font size="3.0"> - Estimate on the annual return is based on the current electricity price in Ontario (13.4 cents/kWh) with a projected and inflation adjusted 8.9% rate of increase</font></p>
-          <p class="help-block" style="text-align: left"><font size="3.0"> - Estimated cost is based on the US market and projected to Canadian dollars</font></p>
-	  <p class="help-block" style="text-align: left"><font size="3.0"> - Break-even time is based on electricity prices projected over a 10 year period</font></p>
-	  <p class="help-block" style="text-align: left"><font size="3.0">For more detailed information about this project please refer to the projects <a href="https://github.com/iborozan/solar"> Github </a> page</font></p>
-	 </div>
-	 </div>
-	</div>	
-	  <!--
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-	  
-       </div>
-      </div>   
-    </div>
-  -->
- </section>
-
-  
-  <!-- Services Section -->
-  <!-- 
-  <section class="page-section" id="services">
-    <div class="container">
-      <h2 class="text-center mt-0">At Your Service</h2>
-      <hr class="divider my-4">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Sturdy Themes</h3>
-            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Up to Date</h3>
-            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Ready to Publish</h3>
-            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Made with Love</h3>
-            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
--->
-  <!-- Portfolio Section -->
-  <!--
-  <section id="portfolio">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-            <div class="portfolio-box-caption p-3">
-              <div class="project-category text-white-50">
-                Category
-              </div>
-              <div class="project-name">
-                Project Name
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
--->
-  <!-- Call to Action Section -->
-  <!--
-  <section class="page-section bg-dark text-white">
-    <div class="container text-center">
-      <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-      <a class="btn btn-light btn-xl" href="https://startbootstrap.com/themes/creative/">Download Now!</a>
-    </div>
-  </section>
- -->
-
-
-  <!-- Contact Section -->
-  <section class="page-section" id="contact">
-    <div class="container">
-      <!--
-      <div class="row justify-content-center">
-	<!--
-	<div class="col-lg-8 text-center">
-          <h2 class="mt-0">Let's Get In Touch!</h2>
-          <hr class="divider my-4">
-          <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-        </div>
-      </div>
--->
-      <div class="row">
-	<div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-	 <!-- 
-	  <a href="url">Github</a> 
-        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-         <!-- <i class="fas fa-phone fa-3x mb-3 text-muted"></i> 
-          <div>+1 (202) 555-0149</div> -->
-        </div>
-        <div class="col-lg-4 mr-auto text-center">
-          <!-- <i class="fas fa-envelope fa-3x mb-3 text-muted"></i> -->
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <!--<a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a> -->
-        </div>
-      </div>
-    </div>
-  </section>
-
+ 
   <!-- Footer -->
   <footer class="bg-light py-5">
     <div class="container">

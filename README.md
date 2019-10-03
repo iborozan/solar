@@ -6,7 +6,7 @@ GoSolar: Accurately predicting photovoltaic installation power generation using 
 About
 =====
 
-Developed a machine learning based model to accurately predict the energy output of residential solar panel installations in Ontario. The model is trained using real data obtained from two sources:
+Developed a machine learning based model to accurately predict the energy output for residential solar panel installations in Ontario. The model is trained using real data obtained from two sources:
 
 * a dataset collected from [photovoltaic (PV) installations](https://openpv.nrel.gov/) on the ground by the National Renewable Energy Project (NREL) a national laboratory of the US Department of Energy
 
