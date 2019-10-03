@@ -18,7 +18,7 @@ Developed a machine learning based model to accurately predict the energy output
 
 Based on the irradiance data below:
 
-![alt text](https://drive.google.com/open?id=1c58DP81eR6ChYnGTnLmih6oeaTXxOBpJ)
+![alt text](![alt text](https://raw.githubusercontent.com/iborozan/solar/readme_img/Solargis-North-America-DNI-solar-resource-map-en.png =250x250)
 
 decided to use only data about installtions above the 39th parallel
 
