@@ -18,11 +18,11 @@ Developed a machine learning based model to accurately predict the energy output
 
 Based on the irradiance data below:
 
-![alt text](https://drive.google.com/open?id=1c58DP81eR6ChYnGTnLmih6oeaTXxOBpJ)
+![alt text]()
 
 decided to use only data about installtions above the 39th parallel
 
-![alt text](https://drive.google.com/open?id=1j5aKgGo5owh90qb_h2bUV5ItdnR_X1Kl)
+![alt text]()
 
 The final product is a user friendly webb app developed to help Ontario residents predict their solar installation annual energy output and other key characteristics with improved accuracy.
 
