@@ -1,6 +1,6 @@
 def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=300):
     """A function for saving figures in a prespecified direcotry"""
-    IMAGES_PATH = '/home/iborozan/work/Data-Science/projects/renewable/presentation/week3/'
+    IMAGES_PATH = '/home/iborozan/work/Data-Science/Insight/project/presentations/week4/'
     path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
     print("Saving figure", path)
     if tight_layout:
