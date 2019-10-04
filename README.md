@@ -32,11 +32,12 @@ Due to a significant difference in solar irradiance along the four cardinal dire
 </p>
 
 
-only the US solar instllations within the rectanugal region shown in the figure below are included in the analysis. 
+only the US solar instllations within the rectanugal region shown in the figure 'Direct Normal Irradiance' are used for further analysis.  
+
+In figure below we show the same US instllations and their proximity to communities in Ontario.
 
 <p float="left">
-   <img src="./figures/Ontaro_communities_gimp.png" width="400" height="400"> 
-   
+   <img src="./figures/Ontaro_communities2.png" width="400" height="400"> 
 </p>
 
 After data processing and feature selection 8 numerical features  
