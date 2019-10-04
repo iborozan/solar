@@ -51,7 +51,7 @@ After data processing and feature selection 8 numerical features
 - Direct Horizontal Irradiance 
 - Global Horizontal Irradiance 
 
-and 76859 data points were used for training, validation, model selection and evaluation on the test set (for more detail about the analysis see the [technical report](./notebooks/solar_eda_and_technical_report.ipynb).  
+and 76859 data points were used for training, validation, model selection and evaluation on the test set (for more detail about the analysis see the [technical report](./notebooks/solar_eda_and_technical_report.ipynb)).  
 
 **Web app**
 
