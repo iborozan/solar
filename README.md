@@ -20,25 +20,26 @@ The model is trained using real data obtained from two sources:
 
 * a dataset from the [National Solar Radiation Database (NSRDB)](https://nsrdb.nrel.gov/) that includes hourly measures of weather patterns such as radiation, position of the sun, temperature and wind speed
 
-Variables such as Global Horizontal Irradiance (GHI), Direct Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), Wind Speed, Temperature and Solar Zenith Angle were averaged over a year. 
+Variables such as Global Horizontal Irradiance (GHI), Direct Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), Wind Speed, Temperature and Solar Zenith Angle obtained from NSRDB were averaged over a year. 
 
 **EDA short summary**
 
-Based on solar irradiation data decided to include only US installations along the US/Canada border (shown in red).
+Due to a significant difference in solar irradiance along the four cardinal directions North/South and East/West as shown in the figures below  
 
 <p float="left">
   <img src="./figures/Solargis-North-America-DNI-solar-resource-map-en.png"" width="40%" height="30%">
-  <img src="./figures/Ontaro_communities_gimp.png" width="400" height="400"> 
+  <img src="./figures/DNI_irradiance_gimp.png" width="400" height="300"> 
 </p>
 
 
-There is a significant difference in Direct Normal Irradiance between the East and West coast. Decided to include only installations > -100 degree East for further analysis. 
+only the US solar instllations within the rectanugal region shown in the figure below are included in the analysis. 
 
 <p float="left">
-   <img src="./figures/DNI_irradiance_gimp.png" width="400" height="300"> 
+   <img src="./figures/Ontaro_communities_gimp.png" width="400" height="400"> 
+   
 </p>
 
-After data processing and feature selection 8 numerical features were used in the training and validation steps: 
+After data processing and feature selection 8 numerical features  
 
 - Size (kW)
 - array tilt
@@ -49,6 +50,7 @@ After data processing and feature selection 8 numerical features were used in th
 - Direct Horizontal Irradiance 
 - Global Horizontal Irradiance 
 
+and 76859 data points were used for training, validation, model selection and evaluation on the test set (for more detail about the analysis see the [technical report](./notebooks/solar_eda_and_technical_report.ipynb).  
 
 **Web app**
 
