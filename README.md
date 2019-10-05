@@ -20,7 +20,7 @@ The model is trained using real data obtained from two sources:
 
 * a dataset from the [National Solar Radiation Database (NSRDB)](https://nsrdb.nrel.gov/) that includes hourly measures of weather patterns such as radiation, position of the sun, temperature and wind speed
 
-Weather and solar variables such as Global Horizontal Irradiance (GHI), Direct Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), Wind Speed, Temperature and Solar Zenith Angle obtained from NSRDB are averaged over a year. 
+Solar and weather values for variables such as Global Horizontal Irradiance (GHI), Direct Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), Wind Speed, Temperature and Solar Zenith Angle obtained from the NSRDB are averaged over a year. 
 
 ### EDA short summary
 
