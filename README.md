@@ -32,7 +32,7 @@ Due to a significant difference in solar irradiance along the four cardinal dire
 </p>
 
 
-only solar installations within the US located within a rectangular region in blue ('Direct Normal Irradiance' figure above) are used for further analysis.  
+only solar installations within the US located within a rectangular region shown in blue (see 'Direct Normal Irradiance' figure above) are used for further analysis.
 
 In figure below we show the same US installations and their proximity to communities in Ontario.
 
