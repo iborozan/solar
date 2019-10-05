@@ -11,8 +11,8 @@ About
 =====
 
 Developed a machine learning based model to accurately predict the energy output for residential solar panel installations in Ontario. 
-
-**Data**
+ 
+### Data
 
 The model is trained using real data obtained from two sources:
 
@@ -22,7 +22,7 @@ The model is trained using real data obtained from two sources:
 
 Variables such as Global Horizontal Irradiance (GHI), Direct Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), Wind Speed, Temperature and Solar Zenith Angle obtained from NSRDB were averaged over a year. 
 
-**EDA short summary**
+### EDA short summary
 
 Due to a significant difference in solar irradiance along the four cardinal directions North/South and East/West as shown in the figures below  
 
@@ -53,7 +53,7 @@ After data processing and feature selection 8 numerical features
 
 and 76859 data points were used for training, validation, model selection and evaluation on the test set (for more details about the model and the analysis see the [technical report](./notebooks/solar_eda_and_technical_report.ipynb)).  
 
-**Web app**
+### Web app
 
 The final product is a user friendly [webb app](http://hbaranalytics.com:5000) developed to help Ontario residents predict their solar installation annual energy output and other key characteristics with improved accuracy.
 
