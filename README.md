@@ -28,7 +28,7 @@ Due to a significant difference in solar irradiance along the four cardinal dire
 
 <p float="left">
   <img src="./figures/Solargis-North-America-DNI-solar-resource-map-en.png"" width="40%" height="30%">
-  <img src="./figures/DNI_irradiance_gimp.png" width="400" height="300"> 
+  <img src="./figures/DNI_irradiance_gimp.png" width="470" height="360"> 
 </p>
 
 
