@@ -43,7 +43,7 @@ In the Figure C below we show the same US installations (red) and their proximit
    <img src="./figures/Ontaro_communities2.png" width="400" height="400"> 
 </p>
 
-### Data set used for Machine learning model selection, training and validation 
+## Data set used for Machine learning model selection, training and validation 
 
 After data processing and feature selection 8 numerical features
 
