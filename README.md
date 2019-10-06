@@ -1,4 +1,4 @@
-## GoSolar: accurately predicting photovoltaic installation power generation using machine learning and weather information 
+## GoSolar: accurately predicting photovoltaic installation power generation, cost and savings using machine learning and weather information 
 
 <p class="aligncenter">
 <img src="./figures/solar-city-Japan.jpg" align="middle" width="100%" height="300">
