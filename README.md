@@ -36,9 +36,10 @@ Due to a significant difference in solar irradiance along the four cardinal dire
 
 only solar installations in the US located within a blue rectangular region shown in Figure B above are included in the analysis.
 
-In the Figure below we show the same US installations (red) and their proximity to communities in Ontario (blue).
+In the Figure C below we show the same US installations (red) and their proximity to communities in Ontario (blue).
 
 <p float="left">
+ C.
    <img src="./figures/Ontaro_communities2.png" width="400" height="400"> 
 </p>
 
