@@ -24,17 +24,19 @@ Solar and weather values for variables such as Global Horizontal Irradiance (GHI
 
 ### EDA short summary
 
-Due to a significant difference in solar irradiance along the four cardinal directions North/South and East/West as shown in the figures below  
+Due to a significant difference in solar irradiance along the four cardinal directions North/South and East/West as shown in the Figures A and B below  
 
 <p float="left">
+ A.
   <img src="./figures/Solargis-North-America-DNI-solar-resource-map-en.png"" width="40%" height="30%">
+ B.                                                                                                   
   <img src="./figures/DNI_irradiance2_gimp.png" width="470" height="360"> 
 </p>
 
 
-only solar installations in the US located within a rectangular region shown in blue (see 'Direct Normal Irradiance' figure above) are included in the analysis.
+only solar installations in the US located within a blue rectangular region shown in Figure B above are included in the analysis.
 
-In the figure below we show the same US installations (red) and their proximity to communities in Ontario (blue).
+In the Figure below we show the same US installations (red) and their proximity to communities in Ontario (blue).
 
 <p float="left">
    <img src="./figures/Ontaro_communities2.png" width="400" height="400"> 
