@@ -22,7 +22,7 @@ The model is trained using real data obtained from two sources:
 
 Solar and weather values for variables such as Global Horizontal Irradiance (GHI), Direct Horizontal Irradiance (DHI), Direct Normal Irradiance (DNI), Wind Speed, Temperature and Solar Zenith Angle downloaded from the NSRDB are averaged over a year. 
 
-## EDA short summary
+## EDA - short summary
 
 Due to a significant difference in solar irradiance along the four cardinal directions North/South and East/West (as shown in the Figures A and B below)  
 
@@ -43,7 +43,7 @@ In the Figure C below we show the same US installations (red) and their proximit
    <img src="./figures/Ontaro_communities2.png" width="400" height="400"> 
 </p>
 
-## Data set used for Machine learning model selection, training and validation 
+## Data set used for machine learning model selection, training and validation 
 
 After data processing and feature selection 8 numerical features
 
