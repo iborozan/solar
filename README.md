@@ -43,6 +43,8 @@ In the Figure C below we show the same US installations (red) and their proximit
    <img src="./figures/Ontaro_communities2.png" width="400" height="400"> 
 </p>
 
+## Data set used for Machine learning model selection, training and validation 
+
 After data processing and feature selection 8 numerical features
 
 - Size (kW)
@@ -54,7 +56,7 @@ After data processing and feature selection 8 numerical features
 - Direct Horizontal Irradiance 
 - Global Horizontal Irradiance 
 
-and 76859 data points were used for training, validation, model selection and evaluation on the test set (for more details about the model and the analysis see the [technical report](./notebooks/solar_eda_and_technical_report.ipynb)).  
+and 76859 data points were used for training, validation, model selection and evaluation on the test set (for more details about the model and the analysis performd see the [technical report](./notebooks/solar_eda_and_technical_report.ipynb)).  
 
 ### Web app
 
