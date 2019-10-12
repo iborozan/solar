@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><font size="6"><i>GOSolar!</i></font></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><font size="7"><b><i>GOSolar!</i></b></font></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -185,40 +185,40 @@
 
 	    <div class="col-md-5">
         <div class="container">
-          <h3 style="text-align: left; color:red">Predictions:</h3>
+          <h2 style="text-align: left; color:red">Predictions:</h2>
             <div class="row col-md-10 col-md-offset-2 custyle">
-            <table class="table table-striped custab" style="width: 400px; margin-left: 0px">
+            <table class="table table-striped custab" style="width: 500px; margin-left: 0px">
             <thead>
                 <tr>
                     <th></th>
-                    <th><font size="4">Value</font></th>
-                    <th><font size="4">Amount</font></th>
+                    <th><font size="5">Value</font></th>
+                    <th><font size="5">Amount</font></th>
                 </tr>
             </thead>
                     <tbody><tr>
                         <td></td>
-                        <td><font size="4.5"><b>Annual Energy Output (kWh/year)</font></b></td>
-                        <td>{{sol_energy}}</td>
+                        <td><font size="5"><b>Annual Energy Output (kWh/year)</font></b></td>
+                        <td><font size="4">{{sol_energy}}</font></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font size="4.5"><b>Annual Return (CAD)</font></b></td>
-                        <td>{{savings}}</td>
+                        <td><font size="5"><b>Annual Return (CAD)</font></b></td>
+                        <td><font size="4">{{savings}}</font></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font size="4.5"><b>Estimated cost (CAD)</font></b></td>
-                        <td>{{cost}}</td>
+                        <td><font size="5"><b>Estimated cost (CAD)</font></b></td>
+                        <td><font size="4">{{cost}} +/- {{cost_ci}}</font></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font size="4.5"><b>Break Even Time (Years)</font></b></td>
-                        <td>{{b1}} +/- {{b2}}</td>
+                        <td><font size="5"><b>Break Even Time (Years)</font></b></td>
+                        <td><font size="4">{{b1}} +/- {{b2}}</font></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><font size="4.5"><b>Optimal Tilt (degrees)</font></b></td>
-                        <td>{{optimum_tilt}}</td>
+                        <td><font size="5"><b>Optimal Tilt (degrees)</font></b></td>
+                        <td><font size="4">{{optimum_tilt}}</font></td>
                     </tr>
             </tbody></table>
 	    <!--
@@ -226,7 +226,7 @@
 	    <p class="help-block" style="text-align: left"><font size="3.0"><sup>**</sup>Estimated cost is based on the US market and projected to Canadian dollars</font></p>
 	    <p class="help-block" style="text-align: left"><font size="3.0"><sup>***</sup>Break-even time is based on electricity prices projected over a 10 year period</font></p>
             -->
-	    <p class="help-block" style="text-align: left"><font size="2.0">For more information see <a href="../static/about.html">about</a> and the projects <a href="https://github.com/iborozan/solar"> Github </a> page </font></p>
+	    <p class="help-block" style="text-align: left"><font size="3.0">For more information see <a href="../static/about.html">about</a> and the projects <a href="https://github.com/iborozan/solar"> Github </a> page </font></p>
             </div>
         </div>
       </div>

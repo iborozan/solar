@@ -79,6 +79,7 @@ def tag_output():
                sol_energy = 'Inefficient direction/azimuth'
                savings = '-'
                cost= '-'
+               cost_ci = '-'
                be1='-'
                be2='-'
                optimum_tilt='-'
@@ -86,19 +87,20 @@ def tag_output():
                                   sol_energy=sol_energy,
                                   savings = savings,
                                   cost=cost,
+                                  cost_ci = cost_ci,
                                   be1=be1,
                                   be2=be2,
                                   optimum_tilt=optimum_tilt,
                                   my_form_result="NotEmpty")
            else:
                return render_template("index.html",
-                                  sol_energy=round(sol_energy[0], 0),
-                                  savings = round(savings[0], 0),
-                                  cost=round(cost[0], 1),
-                                  #cost_ci=round(cost[0]*0.25, 0),
-                                  b1=(round(be1[0], 0) + round(be2[0], 0))/2,
+                                  sol_energy=int(round(sol_energy[0], 0)),
+                                  savings = int(round(savings[0], 0)),
+                                  cost=int(round(cost[0], 1)),
+                                  cost_ci=int(round(cost[0]*0.1527, 1)),
+                                  b1=round((be1[0] + be2[0])/2, 1),
                                   b2=round((be2[0] - be1[0])/2, 1),
-                                  optimum_tilt=round(optimum_tilt, 0),
+                                  optimum_tilt=int(round(optimum_tilt, 0)),
                                   my_form_result="NotEmpty")
 
 

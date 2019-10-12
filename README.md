@@ -68,3 +68,4 @@ Based on geographical location, panel size, roof pitch and its orientation the G
 * Annual Return (CAD)
 * Installation cost (CAD)
 * Break Even Time (Years)
+* Optimal Tilt (degrees)
