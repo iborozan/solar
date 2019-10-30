@@ -10,7 +10,7 @@
 About
 =====
 
-This is a short (3 week) data science project that I worked on as an [Insight](https://www.insightdatascience.com/) fellow. The project is about developing a machine learning based model to accurately predict the energy output for residential solar panel installations in Ontario. 
+This is a short (3 week) data science project that I worked on as an [Insight](https://www.insightdatascience.com/) fellow. The project is about developing a machine learning regression model to accurately predict the energy output for residential solar panel installations in Ontario. 
  
 ## Data
 
