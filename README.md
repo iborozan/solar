@@ -59,7 +59,7 @@ and 76859 data points were used for training, validation, model selection and ev
 
 ## Web app
 
-The final product is a user friendly [webb app](./webapp/solar_demo.mov) developed to help Ontario residents predict their solar installation annual energy output and other key characteristics with improved accuracy.
+The final product is a user friendly [webb app](./webapp/solar_demo.gif) developed to help Ontario residents predict their solar installation annual energy output and other key characteristics with improved accuracy.
 
 Based on geographical location, panel size, roof pitch and its orientation the GoSolar web app provides predictions for:
 
